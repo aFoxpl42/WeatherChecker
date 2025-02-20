@@ -1,7 +1,11 @@
 import requests
 import csv
+import os
+from dotenv import load_dotenv
 
-WEATHER_API_KEY = "8bcad02dd18744afb1f112128251502"
+load_dotenv()
+
+WEATHER_API_KEY = os.getenv('WEATHER_API_KEY')
 
 def get_weather_forecast(search_word):
     url = f"http://api.weatherapi.com/v1/forecast.json?key={WEATHER_API_KEY}&q={search_word}&days=1&aqi=no&alerts=no"
