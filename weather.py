@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-WEATHER_API_KEY = os.getenv('WEATHER_API_KEY')
+WEATHER_API_KEY = os.getenv('WEATHER_API_KEY') # Silly me :)
 
 def get_weather_forecast(search_word):
     url = f"http://api.weatherapi.com/v1/forecast.json?key={WEATHER_API_KEY}&q={search_word}&days=1&aqi=no&alerts=no"
